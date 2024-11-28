@@ -1,0 +1,32 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${LOANS_DB_USER}
+      POSTGRES_PASSWORD: ${LOANS_DB_PASSWORD}
+      POSTGRES_DB: ${LOANS_DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      LOANS_DB_HOST: ${LOANS_DB_HOST}
+      LOANS_DB_PORT: ${LOANS_DB_PORT}
+      LOANS_DB_NAME: ${LOANS_DB_NAME}
+      LOANS_DB_USER: ${LOANS_DB_USER}
+      LOANS_DB_PASSWORD: ${LOANS_DB_PASSWORD}
+      KAGGLE_KEY: ${KAGGLE_KEY}
+    ports:
+      - "8000:8000"
+    links:
+      - db
+
+volumes:
+  db-data:

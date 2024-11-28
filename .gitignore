@@ -1,0 +1,16 @@
+.env
+.idea/
+turing/
+config/__pycache__/
+db-deployment.yaml
+db-service.yaml
+deployment.yaml
+persistent-volume-claim.yaml
+service.yaml
+__pycache__/
+database/__pycache__/
+loan-test.csv
+loan-train.csv
+src/__pycache__/
+235.ipynb
+235.ipynb
