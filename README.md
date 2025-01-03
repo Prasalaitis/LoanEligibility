@@ -18,7 +18,7 @@ Follow these steps to set up and run the project on your local machine.
 First, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/TuringCollegeSubmissions/egacio-DE2v2.3.5.git loan-eligibility-dataset
+git clone https://github.com/Prasalaitis/LoanEligibility.git loan-eligibility-dataset
 cd loan-eligibility-dataset
 ```
 
@@ -60,7 +60,7 @@ This command will:
 Alternatively, you can pull the pre-built Docker image from Docker Hub:
 
 ```bash
-docker pull prasalaitis/loansv1:loans-app
+docker pull your-username/loansv1:loans-app
 ```
 
 ## Project Structure
